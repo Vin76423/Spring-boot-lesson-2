@@ -1,0 +1,56 @@
+POST http://localhost:8080/home/reg
+Content-Type: application/json
+
+{
+  "name": "Oleg",
+  "login": "Olega@2911",
+  "password": "12345",
+  "age": 26
+}
+
+###
+
+POST http://localhost:8080/home/auth
+Content-Type: application/json
+
+{
+  "login": "Olega@2911",
+  "password": "12345"
+}
+
+###
+
+POST http://localhost:8080/home/auth
+Content-Type: application/json
+
+{
+  "login": "Olwdqwd",
+  "password": "12345"
+}
+
+###
+
+
+
+
+
+
+
+POST http://localhost:8080/calc/count?token=891907
+Content-Type: application/json
+
+{
+  "num1": 15,
+  "num2": 3,
+  "operationType": "DIV"
+}
+
+###
+
+GET http://localhost:8080/calc/report?token=850298
+
+###
+
+GET http://localhost:8080/calc/sorted-report?token=850298&operationType=DIV
+
+###
